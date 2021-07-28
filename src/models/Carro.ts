@@ -7,13 +7,26 @@ import {
   } from 'typeorm';
   
   @Entity()
-  export class User {
+  export class Carro {
     @PrimaryGeneratedColumn()
     id: number;
   
     @Column()
     name: string;
+
+    @Column()
+    brand: string;
   
+  
+    @Column()
+    manufacture_year: string;
+
+    @Column()
+    model_year: string;
+
+    @Column()
+    date_sale: Date;
+
     @Column({ type: 'boolean', default: true })
     is_active: boolean;
   
